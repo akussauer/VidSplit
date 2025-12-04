@@ -1,10 +1,10 @@
 import cv2
 
 from PySide6.QtWidgets import QLabel, QSizePolicy
-from PySide6.QtCore import Signal, QTimer, Qt, QPoint
-from PySide6.QtGui import QPainter, QPen, QColor, QImage, QPixmap
+from PySide6.QtCore import Signal, QTimer, Qt
+from PySide6.QtGui import QImage, QPixmap
 
-class PaintVideoWidget(QLabel):
+class VideoWidget(QLabel):
     frameChanged   = Signal(int)
     videoFinished  = Signal()
     bookmarkRequested = Signal(float, QPixmap)
