@@ -25,7 +25,14 @@ class VidSplit(QMainWindow):
         # Setup ffmpeg path
         base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         if platform.system() == "Windows":
-            self.ffmpeg_path = os.path.join(base_dir, "VidSplit", "ffmpeg", "ffmpeg.exe")
+            self.ffmpeg_path = os.path.join(base_dir, "ffmpeg", "ffmpeg.exe")
+        else:
+            self.ffmpeg_path = os.path.join(base_dir, "ffmpeg", "ffmpeg")
+
+        # Check ffmpeg path
+        if not self.ffmpeg_path or not os.path.exists(self.ffmpeg_path):
+            QMessageBox.critical(self, f"FFmpeg Not Found in {self.ffmpeg_path}", "FFmpeg executable not found. Please ensure ffmpeg is included in the application directory.")
+            self.ffmpeg_path = None
 
     def connect_ui(self):
         # Replace the Video Placeholder

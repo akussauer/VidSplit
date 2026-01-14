@@ -4,7 +4,7 @@ __pycache__/
 build/
 dist/
 wheels/
-/ffmpeg/
+/ffmpeg/ffmpeg.exe
 *.egg-info
 
 # Virtual environments

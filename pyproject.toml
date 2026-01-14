@@ -1,13 +1,14 @@
 [project]
-name = "vidsplit"
+name = "VidSplit"
 version = "0.1.0"
-description = "Add your description here"
+description = "A program designed for splitting videos into smaller clips"
 readme = "README.md"
+authors = [
+    { name = "Alex Kussauer", email = "akussauer@gmail.com" }
+]
 requires-python = ">=3.12"
 dependencies = [
-    "matplotlib>=3.10.7",
+    "cx-freeze>=8.5.3",
     "opencv-python>=4.12.0.88",
     "pyside6>=6.10.1",
-    "scikit-image>=0.25.2",
-    "scipy>=1.16.3",
 ]
