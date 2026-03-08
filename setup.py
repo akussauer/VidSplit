@@ -3,7 +3,9 @@ import sys
 
 build_options = {
     'packages': [
-        "PySide6",
+        "PySide6.QtCore",
+        "PySide6.QtGui",
+        "PySide6.QtWidgets",
         "cv2",
     ],
     'excludes': ['tkinter'],
